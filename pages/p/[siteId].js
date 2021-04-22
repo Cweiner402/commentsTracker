@@ -7,7 +7,6 @@ import { useAuth } from '@/lib/auth';
 import { createFeedback } from '@/lib/db';
 import { getAllFeedback, getAllSites } from '@/lib/db-admin';
 import { v4 as uuidv4 } from 'uuid';
-//import uuid  from 'uuid/v4';
 
 export async function getStaticProps(context) {
   const siteId = context.params.siteId;
@@ -19,7 +18,8 @@ export async function getStaticProps(context) {
     props: {
 
       initialFeedback: feedback
-    }
+    },
+    revalidate: 1
     
   };
 }
