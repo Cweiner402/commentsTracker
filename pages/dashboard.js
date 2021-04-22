@@ -10,6 +10,7 @@ const Dashboard = () => {
   const auth = useAuth();
   const { data } = useSWR('/api/sites', fetcher)
 
+
   if (!data) 
    return (
     <DashboardShell>

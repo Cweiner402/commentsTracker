@@ -18,6 +18,7 @@ import AddSiteModal from './addSiteModal';
 const DashboardShell = ({ children }) => {
   const { user, signout } = useAuth();
 
+
   return (
     <Box backgroundColor="gray.100" h="100vh">
       <Flex backgroundColor="white" mb={16} w="full">
@@ -36,6 +37,7 @@ const DashboardShell = ({ children }) => {
             <Link mr={4}>Sites</Link>
             <Link>Feedback</Link>
           </Flex>
+          <h1>{user? user.name: 'None'}</h1>
           <Flex justifyContent="center" alignItems="center">
            {user&&( <Button variant="ghost" mr={2} onClick={() => signout()}>
               Log Out
@@ -44,6 +46,7 @@ const DashboardShell = ({ children }) => {
           </Flex>
         </Flex>
       </Flex>
+      
       <Flex margin="0 auto" direction="column" maxW="1250px" px={8}>
         <Breadcrumb>
           <BreadcrumbItem>
