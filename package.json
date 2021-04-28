@@ -24,6 +24,7 @@
     "uuidv4": "^6.2.7"
   },
   "devDependencies": {
+    "@emotion/babel-plugin": "^11.3.0",
     "webpack": "^5.36.0"
   }
 }
