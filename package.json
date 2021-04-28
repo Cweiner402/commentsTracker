@@ -22,5 +22,8 @@
     "react-hook-form": "^7.2.1",
     "swr": "^0.5.5",
     "uuidv4": "^6.2.7"
+  },
+  "devDependencies": {
+    "webpack": "^5.36.0"
   }
 }
